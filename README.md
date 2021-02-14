@@ -28,3 +28,20 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 You can then execute your native executable with: `./target/quarkus-1.0-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/building-native-image.
+
+---
+
+## In Local
+
+1. docker run -d --rm --name hazelcast -p 5701:5701 hazelcast/hazelcast:4.1
+2. ./mvnw quarkus:dev
+3. Call :
+
+curl -X POST http://localhost:8080/myurl
+> https://hzlc.st/R5iwCfKg4rN
+
+curl -X GET http://localhost:8080/R5iwCfKg4rN
+> myurl
+
+curl -X DELETE http://localhost:8080/myurl
+> https://hzlc.st/R5iwCfKg4rN

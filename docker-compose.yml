@@ -10,3 +10,5 @@ services:
   imdg:
     container_name: hazelcast
     image: hazelcast/hazelcast:4.1
+    ports:
+      - 5701:5701
